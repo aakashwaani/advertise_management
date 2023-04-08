@@ -28,7 +28,7 @@
 							class="sidebar-dropdown list-unstyled collapse show"
 							data-bs-parent="#sidebar" style="">
 							<li class="sidebar-item"><a class="sidebar-link"
-								href="index.html"> <i class="fa-solid fa-arrow-right"></i>
+								href="shopers_list.jsp"> <i class="fa-solid fa-arrow-right"></i>
 									View Shoper
 							</a></li>
 						</ul>
@@ -42,15 +42,7 @@
 							</a></li>
 						</ul>
 
-						<ul id="dashboards"
-							class="sidebar-dropdown list-unstyled collapse show"
-							data-bs-parent="#sidebar" style="">
-							<li class="sidebar-item"><a class="sidebar-link"
-								href="index.html"> <i class="fa-solid fa-arrow-right"></i>
-									Users List
-							</a></li>
-						</ul>
-
+					
 						<ul id="dashboards"
 							class="sidebar-dropdown list-unstyled collapse show"
 							data-bs-parent="#sidebar" style="">

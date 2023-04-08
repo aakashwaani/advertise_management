@@ -37,8 +37,8 @@
 							class="sidebar-dropdown list-unstyled collapse show"
 							data-bs-parent="#sidebar" style="">
 							<li class="sidebar-item"><a class="sidebar-link"
-								href="manage_ads.jsp"> <i class="fa-solid fa-arrow-right"></i>
-									Manage Ads
+								href="ad_list.jsp"> <i class="fa-solid fa-arrow-right"></i>
+									Ad List
 							</a></li>
 						</ul>
 
@@ -46,8 +46,8 @@
 							class="sidebar-dropdown list-unstyled collapse show"
 							data-bs-parent="#sidebar" style="">
 							<li class="sidebar-item"><a class="sidebar-link"
-								href="index.html"> <i class="fa-solid fa-arrow-right"></i>
-									View Messages
+								href="feedback.jsp"> <i class="fa-solid fa-arrow-right"></i>
+									Feedback
 							</a></li>
 						</ul></li>
 
@@ -72,12 +72,12 @@
 
 			<main class="content">
 				<div class="container-fluid p-0">
+				<h1 class="h3 mb-3">Create New Add </h1>
 					<div class="row">
 						<div class="col-md-8">
 							<div class="card">
 								<div class="card-header">
-									<h5 class="card-title">Post Your Ad</h5>
-
+	
 								</div>
 								<div class="card-body">
 									<form>
@@ -93,13 +93,13 @@
 											</select>
 										</div>
 										<div class="mb-3">
+											<label class="form-label w-100">Add Photos</label> <input
+												type="file">
+										</div>
+										<div class="mb-3">
 											<label class="form-label">Ad Description</label>
 											<textarea class="form-control" placeholder="Ad Details.. "
 												rows="3"></textarea>
-										</div>
-										<div class="mb-3">
-											<label class="form-label w-100">Add Photos</label> <input
-												type="file">
 										</div>
 										<div class="text-end">
 											<button type="submit" class="btn btn-primary">Submit</button>
