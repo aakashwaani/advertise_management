@@ -73,7 +73,7 @@
 
 			<main class="content">
 				<div class="container-fluid p-0">
-					<h2>Welcome to Online Advertisement System</h2>
+					<h1 style="text-align:center;color:red;">Welcome to Online Advertisement System</h1>
 				</div>
 			</main>
 
