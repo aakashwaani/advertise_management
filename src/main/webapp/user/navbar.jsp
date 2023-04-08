@@ -23,9 +23,9 @@
 					role="button" data-bs-toggle="dropdown" aria-expanded="false">
 						New User </a>
 					<ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-						<li><a class="dropdown-item" href="#">Log In </a></li>
+						<li><a class="dropdown-item" href="login.jsp">Log In </a></li>
 						<hr class="dropdown-divider">
-						<li><a class="dropdown-item" href="#">Register </a></li>
+						<li><a class="dropdown-item" href="signin.jsp">Register </a></li>
 					</ul></li>
 			</ul>
 		</div>

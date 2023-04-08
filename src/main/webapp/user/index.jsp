@@ -12,28 +12,43 @@
 <body>
 
 	<jsp:include page="navbar.jsp"></jsp:include>
-
 	<!-- Header-->
-	<header
-		class="page-header-ui page-header-ui-dark bg-img-repeat bg-primary"
-		style="background-image: url('https://sb-ui-kit-pro.startbootstrap.com/assets/img/backgrounds/pattern-shapes.png')">
-		<div class="page-header-ui-content">
-			<div class="container px-5">
-				<div class="row gx-5 justify-content-center text-light">
-					<div class="col-xl-8 col-lg-10 text-center">
-						<h1 class="page-header-ui-title">Present your business in a
-							whole new way</h1>
-						<p class="page-header-ui-text mb-5">Out with the old, in with
-							the new! Your trash is another's treasure. Start making money, or
-							find great deals today!</p>
-						<a class="btn btn-teal fw-500 me-2" href="#!">Start Exporing</a> <a
-							class="btn btn-link fw-500" href="categories.html">Browse
-							Categories</a>
+	<header>
+	<div class="container col-xxl-8 px-4 py-5">
+		<div class="row flex-lg-row-reverse align-items-center g-5 py-5">
+			<div class="col-10 col-sm-8 col-lg-6">
+				<img
+					src="assets/banner.svg"
+					class="d-block mx-lg-auto img-fluid" alt="" loading="lazy">
+			</div>
+			<div class="col-lg-6">
+				<div class="lc-block mb-3">
+					<div editable="rich">
+						<h2 class="fw-bold display-5">Present your business in a
+							whole new way</h2>
 					</div>
 				</div>
+
+				<div class="lc-block mb-3">
+					<div editable="rich">
+						<p class="lead">Out with the old, in with the new! Your trash is another's
+                            treasure. Start making money, or find great deals today!</p>
+					</div>
+				</div>
+
+				<div
+					class="lc-block d-grid gap-2 d-md-flex justify-content-md-start">
+					<a class="btn btn-primary fw-500 me-2 btn-lg" href="#!">Start
+						Exporing</a> <a class="btn btn-outline-dark px-4 btn-lg"
+						href="categories.jsp" role="button">Browse Categories</a>
+
+				</div>
+
 			</div>
 		</div>
-	</header>
+	</div>
+</header>
+	
 	<!-- Header-->
 
 	<!-- Product section -->

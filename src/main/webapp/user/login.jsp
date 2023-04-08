@@ -53,7 +53,6 @@ body {
 				<p>
 					Dont have an account ? <a href="signin.jsp" class="link-primary">Click
 						here</a>
-
 				</p>
 			</div>
 		</form>

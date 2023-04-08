@@ -34,25 +34,28 @@ body {
 <body>
 
 	<main class="form-signin text-center">
-			<h1 class="h3 mb-3 fw-normal">Create New Account</h1>
-			<form class="row g-3">
-				<div class="col-md-12 text-start">
-					<label for="inputEmail4" class="form-label">Full Name</label> <input
-						type="email" class="form-control" id="inputEmail4">
-				</div>
-				<div class="col-12 text-start">
-					<label for="inputAddress" class="form-label">Username</label> <input
-						type="text" class="form-control" >
-				</div>
-				<div class="col-md-12 text-start">
-					<label for="inputPassword4" class="form-label">Password</label> <input
-						type="password" class="form-control" id="inputPassword4">
-				</div>
-			
-				<div class="col-12">
-					<button type="submit" class="btn btn-primary">Sign in</button>
-				</div>
-			</form>
+		<h1 class="h3 mb-3 fw-normal">Create New Account</h1>
+		<form class="row g-3">
+			<div class="col-md-12 text-start">
+				<label for="inputEmail4" class="form-label">Full Name</label> <input
+					type="email" class="form-control" id="inputEmail4">
+			</div>
+			<div class="col-12 text-start">
+				<label for="inputAddress" class="form-label">Username</label> <input
+					type="text" class="form-control">
+			</div>
+			<div class="col-md-12 text-start">
+				<label for="inputPassword4" class="form-label">Password</label> <input
+					type="password" class="form-control" id="inputPassword4">
+			</div>
+
+			<div class="col-12">
+				<button type="submit" class="btn btn-primary">Sign in</button>
+			</div>
+			<div class="col-12">
+				<a href="index.jsp">Back to Home</a>
+			</div>
+		</form>
 
 	</main>
 </body>

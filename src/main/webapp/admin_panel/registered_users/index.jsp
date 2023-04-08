@@ -24,15 +24,15 @@
 						aria-expanded="true"> <i class="fa-solid fa-bars"></i> <span
 							class="align-middle">Menus</span>
 					</a>
+
 						<ul id="dashboards"
 							class="sidebar-dropdown list-unstyled collapse show"
 							data-bs-parent="#sidebar" style="">
 							<li class="sidebar-item"><a class="sidebar-link"
-								href="index.html"> <i class="fa-solid fa-arrow-right"></i>
-									View Shoper
+								href="manage_ads.jsp"> <i class="fa-solid fa-arrow-right"></i>
+									Create New Add
 							</a></li>
 						</ul>
-
 						<ul id="dashboards"
 							class="sidebar-dropdown list-unstyled collapse show"
 							data-bs-parent="#sidebar" style="">
@@ -47,16 +47,7 @@
 							data-bs-parent="#sidebar" style="">
 							<li class="sidebar-item"><a class="sidebar-link"
 								href="index.html"> <i class="fa-solid fa-arrow-right"></i>
-									Users List
-							</a></li>
-						</ul>
-
-						<ul id="dashboards"
-							class="sidebar-dropdown list-unstyled collapse show"
-							data-bs-parent="#sidebar" style="">
-							<li class="sidebar-item"><a class="sidebar-link"
-								href="index.html"> <i class="fa-solid fa-arrow-right"></i>
-									View Feedback
+									View Messages
 							</a></li>
 						</ul></li>
 
@@ -76,7 +67,7 @@
 					class="hamburger align-self-center"></i>
 				</a>
 
-				
+
 			</nav>
 
 			<main class="content">

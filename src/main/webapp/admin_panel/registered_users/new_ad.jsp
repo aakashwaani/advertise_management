@@ -24,15 +24,15 @@
 						aria-expanded="true"> <i class="fa-solid fa-bars"></i> <span
 							class="align-middle">Menus</span>
 					</a>
+
 						<ul id="dashboards"
 							class="sidebar-dropdown list-unstyled collapse show"
 							data-bs-parent="#sidebar" style="">
 							<li class="sidebar-item"><a class="sidebar-link"
-								href="index.html"> <i class="fa-solid fa-arrow-right"></i>
-									View Shoper
+								href="new_ad.jsp"> <i class="fa-solid fa-arrow-right"></i>
+									Create New Add
 							</a></li>
 						</ul>
-
 						<ul id="dashboards"
 							class="sidebar-dropdown list-unstyled collapse show"
 							data-bs-parent="#sidebar" style="">
@@ -47,16 +47,7 @@
 							data-bs-parent="#sidebar" style="">
 							<li class="sidebar-item"><a class="sidebar-link"
 								href="index.html"> <i class="fa-solid fa-arrow-right"></i>
-									Users List
-							</a></li>
-						</ul>
-
-						<ul id="dashboards"
-							class="sidebar-dropdown list-unstyled collapse show"
-							data-bs-parent="#sidebar" style="">
-							<li class="sidebar-item"><a class="sidebar-link"
-								href="index.html"> <i class="fa-solid fa-arrow-right"></i>
-									View Feedback
+									View Messages
 							</a></li>
 						</ul></li>
 
@@ -76,12 +67,48 @@
 					class="hamburger align-self-center"></i>
 				</a>
 
-				
+
 			</nav>
 
 			<main class="content">
 				<div class="container-fluid p-0">
-					<h2>Welcome to Online Advertisement System</h2>
+					<div class="row">
+						<div class="col-md-8">
+							<div class="card">
+								<div class="card-header">
+									<h5 class="card-title">Post Your Ad</h5>
+
+								</div>
+								<div class="card-body">
+									<form>
+										<div class="mb-3">
+											<label class="form-label">Ad Title</label> <input type="text"
+												class="form-control" placeholder="eg. Apple Iphone 11">
+										</div>
+										<div class="mb-3">
+											<label class="form-label">Category</label> <select
+												id="inputState" class="form-control form-select">
+												<option selected="">Choose...</option>
+												<option>...</option>
+											</select>
+										</div>
+										<div class="mb-3">
+											<label class="form-label">Ad Description</label>
+											<textarea class="form-control" placeholder="Ad Details.. "
+												rows="3"></textarea>
+										</div>
+										<div class="mb-3">
+											<label class="form-label w-100">Add Photos</label> <input
+												type="file">
+										</div>
+										<div class="text-end">
+											<button type="submit" class="btn btn-primary">Submit</button>
+										</div>
+									</form>
+								</div>
+							</div>
+						</div>
+					</div>
 				</div>
 			</main>
 
