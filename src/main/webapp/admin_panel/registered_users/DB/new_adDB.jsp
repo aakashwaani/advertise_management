@@ -14,7 +14,7 @@ try {
 
 	// file limit size of 10 MB         
 	MultipartRequest m = new MultipartRequest(request,
-	"C:\\Users\\Akash\\eclipse-workspace\\AdvertiseManagementSystem\\src\\main\\webapp\\admin_panel\\registered_users\\assets\\advImage",
+	"//Users//snehajature//git//advertise_management//src//main//webapp//admin_panel//registered_users//assets//img",
 	10 * 1024 * 1024);
 	//	String id1 =session.getAttribute("emp_id").toString();
 	// Get the form data
@@ -35,6 +35,7 @@ try {
 
 	try {
 		Connection con = Connector.getCon();
+		
 		String sql = "INSERT INTO ads (title, description, category, price,image_path) VALUES (?, ?, ?, ?,?);";
 
 		PreparedStatement pstmt = con.prepareStatement(sql);
