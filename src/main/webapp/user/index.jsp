@@ -14,41 +14,41 @@
 	<jsp:include page="navbar.jsp"></jsp:include>
 	<!-- Header-->
 	<header>
-	<div class="container col-xxl-8 px-4 py-5">
-		<div class="row flex-lg-row-reverse align-items-center g-5 py-5">
-			<div class="col-10 col-sm-8 col-lg-6">
-				<img
-					src="assets/banner.jpg"
-					class="d-block mx-lg-auto img-fluid" alt="" loading="lazy">
-			</div>
-			<div class="col-lg-6">
-				<div class="lc-block mb-3">
-					<div editable="rich">
-						<h2 class="fw-bold display-5">Present your business in a
-							whole new way</h2>
+		<div class="container col-xxl-8 px-4 py-5">
+			<div class="row flex-lg-row-reverse align-items-center g-5 py-5">
+				<div class="col-10 col-sm-8 col-lg-6">
+					<img src="assets/banner.jpg" class="d-block mx-lg-auto img-fluid"
+						alt="" loading="lazy">
+				</div>
+				<div class="col-lg-6">
+					<div class="lc-block mb-3">
+						<div editable="rich">
+							<h2 class="fw-bold display-5">Present your business in a
+								whole new way</h2>
+						</div>
 					</div>
-				</div>
 
-				<div class="lc-block mb-3">
-					<div editable="rich">
-						<p class="lead">Out with the old, in with the new! Your trash is another's
-                            treasure. Start making money, or find great deals today!</p>
+					<div class="lc-block mb-3">
+						<div editable="rich">
+							<p class="lead">Out with the old, in with the new! Your trash
+								is another's treasure. Start making money, or find great deals
+								today!</p>
+						</div>
 					</div>
+
+					<div
+						class="lc-block d-grid gap-2 d-md-flex justify-content-md-start">
+						<a class="btn btn-primary fw-500 me-2 btn-lg" href="#!">Start
+							Exporing</a> <a class="btn btn-outline-dark px-4 btn-lg"
+							href="categories.jsp" role="button">Browse Categories</a>
+
+					</div>
+
 				</div>
-
-				<div
-					class="lc-block d-grid gap-2 d-md-flex justify-content-md-start">
-					<a class="btn btn-primary fw-500 me-2 btn-lg" href="#!">Start
-						Exporing</a> <a class="btn btn-outline-dark px-4 btn-lg"
-						href="categories.jsp" role="button">Browse Categories</a>
-
-				</div>
-
 			</div>
 		</div>
-	</div>
-</header>
-	
+	</header>
+
 	<!-- Header-->
 
 	<!-- Product section -->
@@ -59,6 +59,14 @@
 				class="row gx-4 gx-lg-5 row-cols-2 row-cols-md-3 row-cols-xl-4 justify-content-center">
 				<div class="col mb-5">
 					<div class="card h-100">
+						<%
+											try {
+												int cnt = 1;
+												Connection con = ConnectionProvider.getConnection();
+												Statement stmt = con.createStatement();
+												ResultSet rs = stmt.executeQuery("select * from ads");
+												while (rs.next()) {
+											%>
 						<!-- Product image-->
 						<img class="card-img-top"
 							src="https://dummyimage.com/450x300/dee2e6/6c757d.jpg" alt="...">
