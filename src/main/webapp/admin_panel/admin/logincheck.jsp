@@ -5,12 +5,14 @@
 <%
 
 Class.forName("com.mysql.jdbc.Driver");
-
 Connection con = DriverManager.getConnection("jdbc:mysql://localhost:3306/advertisement", "root", "root");
  String sql = "select * from admin where email=? and password=?";
  PreparedStatement ps = con.prepareStatement(sql);
  ps.setString(1, request.getParameter("email"));
  ps.setString(2, request.getParameter("password"));
+ 
+ 
+ 
  ResultSet rs = ps.executeQuery();
  if(rs.next()){
 	 session.setAttribute("adminId", rs.getString("adminId"));
