@@ -66,45 +66,93 @@
 				<a class="sidebar-toggle js-sidebar-toggle"> <i
 					class="hamburger align-self-center"></i>
 				</a>
-
-
 			</nav>
 
 			<main class="content">
 				<div class="container-fluid p-0">
-				<h1 class="h3 mb-3">Create New Add </h1>
+					<h1 class="h3 mb-3">Create New Add</h1>
 					<div class="row">
 						<div class="col-md-8">
 							<div class="card">
-								<div class="card-header">
-	
-								</div>
+								<div class="card-header"></div>
 								<div class="card-body">
-									<form>
+									<form action="DB/new_adDB.jsp" method="post"
+										class=" needs-validation" enctype="multipart/form-data"
+										novalidate>
 										<div class="mb-3">
-											<label class="form-label">Ad Title</label> <input type="text"
-												class="form-control" placeholder="eg. Apple Iphone 11">
+											<label for="title" class="form-label">Ad Title</label> <input
+												type="text" class="form-control " id="title" name="title"
+												placeholder="eg.Apple Iphone 11" required>
+											<div class="invalid-feedback">Please provide a title
+												for your ad.</div>
 										</div>
 										<div class="mb-3">
-											<label class="form-label">Category</label> <select
-												id="inputState" class="form-control form-select">
-												<option selected="">Choose...</option>
-												<option>...</option>
+											<label for="category">Category</label> <select
+												class="form-control form-select" id="category"
+												name="adcategory" required>
+												<option value="">Select a category</option>
+												<option value="furniture">Furniture</option>
+												<option value="electronics">Electronics</option>
+												<option value="vehicles">Vehicles</option>
+												<option value="clothing">Clothing</option>
+												<option value="housing">Housing</option>
+												<option value="services">Services</option>
 											</select>
+											<div class="invalid-feedback">Please select a category
+												for your ad.</div>
 										</div>
 										<div class="mb-3">
-											<label class="form-label w-100">Add Photos</label> <input
-												type="file">
+											<label for="image">Image</label>
+											<div class="custom-file">
+												<input type="file" class="custom-file-input form-label"
+													id="image" name="image" required> <label
+													class="custom-file-label" for="image"></label>
+												<div class="invalid-feedback">Please choose an image
+													for your ad.</div>
+											</div>
 										</div>
 										<div class="mb-3">
 											<label class="form-label">Ad Description</label>
 											<textarea class="form-control" placeholder="Ad Details.. "
-												rows="3"></textarea>
+												rows="3" name="addetails"></textarea>
+										</div>
+										<div class="mb-3">
+											<label for="price">Price</label>
+											<div class="input-group">
+												<div class="input-group-prepend">
+													<span class="input-group-text">$</span>
+												</div>
+												<input type="number" class="form-control" id="price"
+													name="adprice" required>
+												<div class="invalid-feedback">Please provide a price
+													for your ad.</div>
+											</div>
 										</div>
 										<div class="text-end">
 											<button type="submit" class="btn btn-primary">Submit</button>
 										</div>
+
+										<!-- <script>
+    const form = document.querySelector('.needs-validation');
+
+    form.addEventListener('submit', (event) => {
+        event.preventDefault();
+        if (form.checkValidity() === false) {
+            event.stopPropagation();
+            form.classList.add('was-validated');
+        } else {
+            // Simulate a delay of 2 seconds to show the success message
+            setTimeout(function() {
+                alert('Thank you for your message! We will get back to you as soon as possible.');
+                form.reset();
+                form.classList.remove('was-validated');
+            });
+        }
+    });
+</script> -->
+
 									</form>
+
 								</div>
 							</div>
 						</div>
@@ -114,5 +162,6 @@
 
 		</div>
 	</div>
+
 </body>
 </html>

@@ -5,8 +5,7 @@
 <head>
 <meta charset="utf-8" />
 <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-<meta name="viewport"
-	content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
 <title>Insert title here</title>
 <jsp:include page="links.jsp"></jsp:include>
 </head>
@@ -98,7 +97,6 @@
 														<a href="#" class="btn btn-danger btn-sm">Delete</a>
 														</td>
 													</tr>
-
 												</tbody>
 											</table>
 										</div>
@@ -109,7 +107,6 @@
 					</main>
 				</div>
 			</main>
-
 		</div>
 	</div>
 </body>

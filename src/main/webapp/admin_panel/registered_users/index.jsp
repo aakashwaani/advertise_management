@@ -18,7 +18,7 @@
 						Admin</span>
 				</a>
 
-				<ul class="sidebar-nav ">
+				<ul class="sidebar-nav">
 					<li class="sidebar-item"><a data-bs-target="#dashboards"
 						data-bs-toggle="collapse" class="sidebar-link"
 						aria-expanded="true"> <i class="fa-solid fa-bars"></i> <span
@@ -29,7 +29,7 @@
 							class="sidebar-dropdown list-unstyled collapse show"
 							data-bs-parent="#sidebar" style="">
 							<li class="sidebar-item"><a class="sidebar-link"
-								href="manage_ads.jsp"> <i class="fa-solid fa-arrow-right"></i>
+								href="new_ad.jsp"> <i class="fa-solid fa-arrow-right"></i>
 									Create New Add
 							</a></li>
 						</ul>
@@ -62,12 +62,11 @@
 		</nav>
 
 		<div class="main">
+	
 			<nav class="navbar navbar-expand navbar-light navbar-bg">
 				<a class="sidebar-toggle js-sidebar-toggle"> <i
 					class="hamburger align-self-center"></i>
 				</a>
-
-
 			</nav>
 
 			<main class="content">
