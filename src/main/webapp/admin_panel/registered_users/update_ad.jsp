@@ -1,6 +1,6 @@
 <%@ page language="java" contentType="text/html; charset=ISO-8859-1"
 	pageEncoding="ISO-8859-1"%>
-<%@page import="java.sql.*"%>
+	<%@page import="java.sql.*" %>
 <!DOCTYPE html>
 <html>
 <head>
@@ -12,55 +12,8 @@
 <jsp:include page="links.jsp"></jsp:include>
 </head>
 <body>
-	<div class="wrapper">
-		<nav id="sidebar" class="sidebar js-sidebar">
-			<div class="sidebar-content js-simplebar mb-3">
-				<a class="sidebar-brand" href=""> <span class="align-middle">Welcome
-						Admin</span>
-				</a>
 
-				<ul class="sidebar-nav ">
-					<li class="sidebar-item"><a data-bs-target="#dashboards"
-						data-bs-toggle="collapse" class="sidebar-link"
-						aria-expanded="true"> <i class="fa-solid fa-bars"></i> <span
-							class="align-middle">Menus</span>
-					</a>
-
-						<ul id="dashboards"
-							class="sidebar-dropdown list-unstyled collapse show"
-							data-bs-parent="#sidebar" style="">
-							<li class="sidebar-item"><a class="sidebar-link"
-								href="new_ad.jsp"> <i class="fa-solid fa-arrow-right"></i>
-									Create New Add
-							</a></li>
-						</ul>
-						<ul id="dashboards"
-							class="sidebar-dropdown list-unstyled collapse show"
-							data-bs-parent="#sidebar" style="">
-							<li class="sidebar-item"><a class="sidebar-link"
-								href="ad_list.jsp"> <i class="fa-solid fa-arrow-right"></i>
-									Ad List
-							</a></li>
-						</ul>
-
-						<ul id="dashboards"
-							class="sidebar-dropdown list-unstyled collapse show"
-							data-bs-parent="#sidebar" style="">
-							<li class="sidebar-item"><a class="sidebar-link"
-								href="feedback.jsp"> <i class="fa-solid fa-arrow-right"></i>
-									Feedback
-							</a></li>
-						</ul></li>
-
-					<li class="sidebar-item"><a class="sidebar-link"
-						href="login.jsp"> <i
-							class="fa-solid fa-arrow-right-from-bracket"></i> <span
-							class="align-middle">Log Out</span>
-					</a></li>
-				</ul>
-
-			</div>
-		</nav>
+<jsp:include page="sidebar.jsp"></jsp:include>
 		<div class="main">
 			<nav class="navbar navbar-expand navbar-light navbar-bg">
 				<a class="sidebar-toggle js-sidebar-toggle"> <i
@@ -76,13 +29,25 @@
 							<div class="card">
 								<div class="card-header"></div>
 								<div class="card-body">
-									<form action="DB/new_adDB.jsp" method="post"
+									<form action="update_adDB.jsp" method="post"
 										class=" needs-validation" enctype="multipart/form-data"
 										novalidate>
+										 <%
+					      Class.forName("com.mysql.jdbc.Driver");
+					      Connection con = DriverManager.getConnection("jdbc:mysql://localhost:3306/advertisement", "root", "root");
+					      String sql1 = "select * from ads where id=?";
+					      PreparedStatement ps1 = con.prepareStatement(sql1);
+					      ps1.setString(1, request.getParameter("id"));
+					      ResultSet rs = ps1.executeQuery();
+					      
+					      while(rs.next()){
+					        %>
+							<input type="hidden" value="<%=rs.getString("id")%>" id="id" name="id">
+							
 										<div class="mb-3">
 											<label for="title" class="form-label">Ad Title</label> <input
 												type="text" class="form-control " id="title" name="title"
-												placeholder="eg.Apple Iphone 11" required>
+												placeholder="eg.Apple Iphone 11" value="<%=rs.getString("title")%>"  required>
 											<div class="invalid-feedback">Please provide a title
 												for your ad.</div>
 										</div>
@@ -90,7 +55,7 @@
 											<label for="category">Category</label> <select
 												class="form-control form-select" id="category"
 												name="adcategory" required>
-												<option value="">Select a category</option>
+												<option value="<%=rs.getString("category")%>"><%=rs.getString("category")%></option>
 												<option value="furniture">Furniture</option>
 												<option value="electronics">Electronics</option>
 												<option value="vehicles">Vehicles</option>
@@ -101,10 +66,10 @@
 											<div class="invalid-feedback">Please select a category
 												for your ad.</div>
 										</div>
-										<div class="mb-3">
+																				<div class="mb-3">
 											<label class="form-label">Ad Description</label>
 											<textarea class="form-control" placeholder="Ad Details.. "
-												rows="3" name="addetails" required></textarea>
+												rows="3" name="addetails"  required><%=rs.getString("description") %></textarea>
 										</div>
 										<div class="mb-3">
 											<label for="price">Price</label>
@@ -113,7 +78,7 @@
 													<span class="input-group-text">$</span>
 												</div>
 												<input type="number" class="form-control" id="price"
-													name="adprice" required>
+													name="adprice" value="<%=rs.getString("price") %>" required>
 												<div class="invalid-feedback">Please provide a price
 													for your ad.</div>
 											</div>
@@ -121,6 +86,7 @@
 										<div class="mb-3">
 											<label for="image">Image</label>
 											<div class="custom-file">
+											<img src="<%=rs.getString("image_path")%>" height="100" width="100"><br><br>
 												<input type="file" class="custom-file-input form-label"
 													id="image" name="image" required> <label
 													class="custom-file-label" for="image"></label>
@@ -128,9 +94,12 @@
 													for your ad.</div>
 											</div>
 										</div>
-
+										
 										<div class="text-end">
-											<button type="submit" class="btn btn-primary">Submit</button>
+											<button type="submit" class="btn btn-primary">Update Data</button>
+										
+											<%} %>
+										
 										</div>
 									</form>
 								</div>

@@ -11,56 +11,9 @@
 <jsp:include page="links.jsp"></jsp:include>
 </head>
 <body>
-	<div class="wrapper">
-		<nav id="sidebar" class="sidebar js-sidebar">
-			<div class="sidebar-content js-simplebar mb-3">
-				<a class="sidebar-brand" href=""> <span class="align-middle">Welcome
-						Admin</span>
-				</a>
-
-				<ul class="sidebar-nav">
-					<li class="sidebar-item"><a data-bs-target="#dashboards"
-						data-bs-toggle="collapse" class="sidebar-link"
-						aria-expanded="true"> <i class="fa-solid fa-bars"></i> <span
-							class="align-middle">Menus</span>
-					</a>
-
-						<ul id="dashboards"
-							class="sidebar-dropdown list-unstyled collapse show"
-							data-bs-parent="#sidebar" style="">
-							<li class="sidebar-item"><a class="sidebar-link"
-								href="new_ad.jsp"> <i class="fa-solid fa-arrow-right"></i>
-									Create New Add
-							</a></li>
-						</ul>
-						<ul id="dashboards"
-							class="sidebar-dropdown list-unstyled collapse show"
-							data-bs-parent="#sidebar" style="">
-							<li class="sidebar-item"><a class="sidebar-link"
-								href="manage_ads.jsp"> <i class="fa-solid fa-arrow-right"></i>
-									Manage Ads
-							</a></li>
-						</ul>
-
-						<ul id="dashboards"
-							class="sidebar-dropdown list-unstyled collapse show"
-							data-bs-parent="#sidebar" style="">
-							<li class="sidebar-item"><a class="sidebar-link"
-								href="index.html"> <i class="fa-solid fa-arrow-right"></i>
-									View Messages
-							</a></li>
-						</ul></li>
-
-					<li class="sidebar-item"><a class="sidebar-link"
-						href="login.jsp"> <i
-							class="fa-solid fa-arrow-right-from-bracket"></i> <span
-							class="align-middle">Log Out</span>
-					</a></li>
-				</ul>
-
-			</div>
-		</nav>
-
+	
+	<jsp:include page="sidebar.jsp"></jsp:include>
+	
 		<div class="main">
 	
 			<nav class="navbar navbar-expand navbar-light navbar-bg">

@@ -1,7 +1,14 @@
+<<<<<<< HEAD
 <%@page import="com.oreilly.servlet.MultipartRequest"%>
 <%@ page language="java" contentType="text/html; charset=ISO-8859-1"
 	pageEncoding="ISO-8859-1"%>
 <%@page import="java.sql.*"%>
+
+
+
+<script type="text/javascript">
+
+</script>
 
 <%
 	Class.forName("com.mysql.jdbc.Driver");
@@ -32,16 +39,21 @@ if (done > 0) {
 <script type="text/javascript">
 	alert("Added Successfully!!!!!");
 	location.href = "../new_ad.jsp";
-</script>
-<%
-} else {
-%>
-<script type="text/javascript">
-	alert("Fail try again!!!");
-	location.href = "new_ad.jsp";
-</script>
+ 
+ int done=ps.executeUpdate();	
+ if(done>0){%>
+ <script type="text/javascript">
+ alert("Added Successfully!!!!!");
+ location.href="../new_ad.jsp";
+ </script>
 <%
 }
- 
+ else{%>
+<script type="text/javascript">
+ alert("Fail try again!!!");
+location.href="new_ad.jsp";
+</script>
+<%
+} 
 %>
 
