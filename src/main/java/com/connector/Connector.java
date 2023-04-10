@@ -10,7 +10,9 @@ public class Connector {
             Class.forName("com.mysql.jdbc.Driver");
             
             // Define the database URL
+
             String url = "jdbc:mysql://localhost:3306/advertisement";
+
             
             // Establish the database connection
             Connection con = DriverManager.getConnection(url, "root", "root");

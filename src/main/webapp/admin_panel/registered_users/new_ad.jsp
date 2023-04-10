@@ -1,5 +1,6 @@
 <%@ page language="java" contentType="text/html; charset=ISO-8859-1"
 	pageEncoding="ISO-8859-1"%>
+	<%@page import="java.sql.*" %>
 <!DOCTYPE html>
 <html>
 <head>
@@ -101,17 +102,7 @@
 											<div class="invalid-feedback">Please select a category
 												for your ad.</div>
 										</div>
-										<div class="mb-3">
-											<label for="image">Image</label>
-											<div class="custom-file">
-												<input type="file" class="custom-file-input form-label"
-													id="image" name="image" required> <label
-													class="custom-file-label" for="image"></label>
-												<div class="invalid-feedback">Please choose an image
-													for your ad.</div>
-											</div>
-										</div>
-										<div class="mb-3">
+																				<div class="mb-3">
 											<label class="form-label">Ad Description</label>
 											<textarea class="form-control" placeholder="Ad Details.. "
 												rows="3" name="addetails"></textarea>
@@ -128,6 +119,17 @@
 													for your ad.</div>
 											</div>
 										</div>
+										<div class="mb-3">
+											<label for="image">Image</label>
+											<div class="custom-file">
+												<input type="file" class="custom-file-input form-label"
+													id="image" name="image" required> <label
+													class="custom-file-label" for="image"></label>
+												<div class="invalid-feedback">Please choose an image
+													for your ad.</div>
+											</div>
+										</div>
+										
 										<div class="text-end">
 											<button type="submit" class="btn btn-primary">Submit</button>
 										</div>
