@@ -1,6 +1,6 @@
 <%@ page language="java" contentType="text/html; charset=ISO-8859-1"
 	pageEncoding="ISO-8859-1"%>
-	<%@page import="java.sql.*" %>
+<%@page import="java.sql.*"%>
 <!DOCTYPE html>
 <html>
 <head>
@@ -18,7 +18,7 @@
 				<a class="sidebar-brand" href=""> <span class="align-middle">Welcome
 						Admin</span>
 				</a>
-				
+
 				<ul class="sidebar-nav ">
 					<li class="sidebar-item"><a data-bs-target="#dashboards"
 						data-bs-toggle="collapse" class="sidebar-link"
@@ -102,7 +102,7 @@
 											<div class="invalid-feedback">Please select a category
 												for your ad.</div>
 										</div>
-																				<div class="mb-3">
+										<div class="mb-3">
 											<label class="form-label">Ad Description</label>
 											<textarea class="form-control" placeholder="Ad Details.. "
 												rows="3" name="addetails"></textarea>
@@ -129,7 +129,7 @@
 													for your ad.</div>
 											</div>
 										</div>
-										
+
 										<div class="text-end">
 											<button type="submit" class="btn btn-primary">Submit</button>
 										</div>
