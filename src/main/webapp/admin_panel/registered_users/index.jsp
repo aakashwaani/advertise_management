@@ -52,7 +52,7 @@
 						</ul></li>
 
 					<li class="sidebar-item"><a class="sidebar-link"
-						href="pages-profile.html"> <i
+						href="login.jsp"> <i
 							class="fa-solid fa-arrow-right-from-bracket"></i> <span
 							class="align-middle">Log Out</span>
 					</a></li>
@@ -71,7 +71,7 @@
 
 			<main class="content">
 				<div class="container-fluid p-0">
-					<h2>Welcome to Online Advertisement System</h2>
+					<h1 style="text-align:center;color:red;">Welcome to Online Advertisement System</h1>
 				</div>
 			</main>
 

@@ -34,16 +34,16 @@ body {
 <body>
 
 	<main class="form-signin text-center">
-		<form>
+		<form action="userlogincheck.jsp" method="post">
 			<h1 class="h3 mb-3 fw-normal">Please sign in</h1>
 
 			<div class="form-floating my-4">
-				<input type="email" class="form-control" id="floatingInput"
+				<input type="email" class="form-control" name="email" id="email"
 					placeholder="name@example.com"> <label
 					for="floatingInput">User Name</label>
 			</div>
 			<div class="form-floating my-4">
-				<input type="password" class="form-control" id="floatingPassword"
+				<input type="password" class="form-control" name="password" id="password"
 					placeholder="Password" > <label
 					for="floatingPassword">Password</label>
 			</div>
