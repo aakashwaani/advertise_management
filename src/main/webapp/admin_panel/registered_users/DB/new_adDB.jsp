@@ -1,7 +1,23 @@
+<<<<<<< HEAD
 <%@page import="com.oreilly.servlet.MultipartRequest"%>
 <%@ page language="java" contentType="text/html; charset=ISO-8859-1"
     pageEncoding="ISO-8859-1"%>
 <%@page import="java.sql.*" %>
+=======
+<%@ page import="com.connector.*,com.action.*"%>
+<%@ page import="java.sql.*,java.util.*"%>
+<%@page import="com.oreilly.servlet.MultipartRequest"%>
+<%@ page import=" com.oreilly.servlet.*" %>
+
+<%@ page language="java" contentType="text/html; charset=ISO-8859-1"
+	pageEncoding="ISO-8859-1"%>
+
+<%@ page import=" com.oreilly.servlet.*"%>
+
+<script type="text/javascript">
+	alert()
+</script>
+>>>>>>> d9136cc40ce8f80dc8eba0ba66b6ef7b55f106ec
 
 <%
 try{

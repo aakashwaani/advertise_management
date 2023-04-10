@@ -18,7 +18,7 @@
 				<a class="sidebar-brand" href=""> <span class="align-middle">Welcome
 						Admin</span>
 				</a>
-
+				
 				<ul class="sidebar-nav ">
 					<li class="sidebar-item"><a data-bs-target="#dashboards"
 						data-bs-toggle="collapse" class="sidebar-link"
@@ -133,28 +133,7 @@
 										<div class="text-end">
 											<button type="submit" class="btn btn-primary">Submit</button>
 										</div>
-
-										<!-- <script>
-    const form = document.querySelector('.needs-validation');
-
-    form.addEventListener('submit', (event) => {
-        event.preventDefault();
-        if (form.checkValidity() === false) {
-            event.stopPropagation();
-            form.classList.add('was-validated');
-        } else {
-            // Simulate a delay of 2 seconds to show the success message
-            setTimeout(function() {
-                alert('Thank you for your message! We will get back to you as soon as possible.');
-                form.reset();
-                form.classList.remove('was-validated');
-            });
-        }
-    });
-</script> -->
-
 									</form>
-
 								</div>
 							</div>
 						</div>
