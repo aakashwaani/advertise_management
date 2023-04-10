@@ -29,13 +29,25 @@
 							<div class="card">
 								<div class="card-header"></div>
 								<div class="card-body">
-									<form action="DB/new_adDB.jsp" method="post"
+									<form action="update_adDB.jsp" method="post"
 										class=" needs-validation" enctype="multipart/form-data"
 										novalidate>
+										 <%
+					      Class.forName("com.mysql.jdbc.Driver");
+					      Connection con = DriverManager.getConnection("jdbc:mysql://localhost:3306/advertisement", "root", "root");
+					      String sql1 = "select * from ads where id=?";
+					      PreparedStatement ps1 = con.prepareStatement(sql1);
+					      ps1.setString(1, request.getParameter("id"));
+					      ResultSet rs = ps1.executeQuery();
+					      
+					      while(rs.next()){
+					        %>
+							<input type="hidden" value="<%=rs.getString("id")%>" id="id" name="id">
+							
 										<div class="mb-3">
 											<label for="title" class="form-label">Ad Title</label> <input
 												type="text" class="form-control " id="title" name="title"
-												placeholder="eg.Apple Iphone 11" required>
+												placeholder="eg.Apple Iphone 11" value="<%=rs.getString("title")%>"  required>
 											<div class="invalid-feedback">Please provide a title
 												for your ad.</div>
 										</div>
@@ -43,7 +55,7 @@
 											<label for="category">Category</label> <select
 												class="form-control form-select" id="category"
 												name="adcategory" required>
-												<option value="">Select a category</option>
+												<option value="<%=rs.getString("category")%>"><%=rs.getString("category")%></option>
 												<option value="furniture">Furniture</option>
 												<option value="electronics">Electronics</option>
 												<option value="vehicles">Vehicles</option>
@@ -57,7 +69,7 @@
 																				<div class="mb-3">
 											<label class="form-label">Ad Description</label>
 											<textarea class="form-control" placeholder="Ad Details.. "
-												rows="3" name="addetails" required></textarea>
+												rows="3" name="addetails"  required><%=rs.getString("description") %></textarea>
 										</div>
 										<div class="mb-3">
 											<label for="price">Price</label>
@@ -66,7 +78,7 @@
 													<span class="input-group-text">$</span>
 												</div>
 												<input type="number" class="form-control" id="price"
-													name="adprice" required>
+													name="adprice" value="<%=rs.getString("price") %>" required>
 												<div class="invalid-feedback">Please provide a price
 													for your ad.</div>
 											</div>
@@ -74,6 +86,7 @@
 										<div class="mb-3">
 											<label for="image">Image</label>
 											<div class="custom-file">
+											<img src="<%=rs.getString("image_path")%>" height="100" width="100"><br><br>
 												<input type="file" class="custom-file-input form-label"
 													id="image" name="image" required> <label
 													class="custom-file-label" for="image"></label>
@@ -83,7 +96,10 @@
 										</div>
 										
 										<div class="text-end">
-											<button type="submit" class="btn btn-primary">Submit</button>
+											<button type="submit" class="btn btn-primary">Update Data</button>
+										
+											<%} %>
+										
 										</div>
 									</form>
 								</div>
