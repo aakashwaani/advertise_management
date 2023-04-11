@@ -38,8 +38,8 @@
 							class="sidebar-dropdown list-unstyled collapse show"
 							data-bs-parent="#sidebar" style="">
 							<li class="sidebar-item"><a class="sidebar-link"
-								href="ad_list.jsp"> <i class="fa-solid fa-arrow-right"></i>
-									Ad List
+								href="view_ad.jsp"> <i class="fa-solid fa-arrow-right"></i>
+									View Ad
 							</a></li>
 						</ul>
 
