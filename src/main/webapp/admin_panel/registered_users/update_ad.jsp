@@ -86,7 +86,7 @@
 										<div class="mb-3">
 											<label for="image">Image</label>
 											<div class="custom-file">
-											<img src="<%=rs.getString("image_path")%>" height="100" width="100"><br><br>
+											<img src="assets/<%=rs.getString("image_path")%>" height="100" width="100"><br><br>
 												<input type="file" class="custom-file-input form-label"
 													id="image" name="image" required> <label
 													class="custom-file-label" for="image"></label>

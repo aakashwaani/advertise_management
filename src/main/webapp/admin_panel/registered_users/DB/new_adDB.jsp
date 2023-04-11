@@ -5,10 +5,11 @@
 
 
 <script type="text/javascript">
-
+	
 </script>
 
 <%
+try {
 	Class.forName("com.mysql.jdbc.Driver");
 	Connection con = DriverManager.getConnection("jdbc:mysql://localhost:3306/advertisement", "root", "root");
 
@@ -23,7 +24,7 @@ String title = m.getParameter("title");
 String category = m.getParameter("adcategory");
 String description = m.getParameter("addetails");
 String price = m.getParameter("adprice");
-String photo = "img/" + m.getFilesystemName("image");
+String photo = "/img/" + m.getFilesystemName("image");
 
 ps.setString(1, title);
 ps.setString(2, category);
@@ -37,21 +38,18 @@ if (done > 0) {
 <script type="text/javascript">
 	alert("Added Successfully!!!!!");
 	location.href = "../new_ad.jsp";
- 
- int done=ps.executeUpdate();	
- if(done>0){%>
- <script type="text/javascript">
- alert("Added Successfully!!!!!");
- location.href="../new_ad.jsp";
- </script>
-<%
-}
- else{%>
-<script type="text/javascript">
- alert("Fail try again!!!");
-location.href="new_ad.jsp";
 </script>
 <%
-} 
+} else {
+%>
+<script type="text/javascript">
+	alert("Fail try again!!!");
+	location.href = "new_ad.jsp";
+</script>
+<%
+}
+} catch (Exception e) {
+e.printStackTrace();
+}
 %>
 
