@@ -1,9 +1,7 @@
-<<<<<<< HEAD
 <%@page import="com.oreilly.servlet.MultipartRequest"%>
 <%@ page language="java" contentType="text/html; charset=ISO-8859-1"
 	pageEncoding="ISO-8859-1"%>
 <%@page import="java.sql.*"%>
-
 
 
 <script type="text/javascript">
