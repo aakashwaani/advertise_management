@@ -25,7 +25,7 @@ MultipartRequest m = new MultipartRequest(request,s,1024*1024*1024);
  String category = m.getParameter("adcategory");
  String description = m.getParameter("addetails");
  String price = m.getParameter("adprice");
-String photo="img/"+m.getFilesystemName("image");
+String photo="/img/"+m.getFilesystemName("image");
 
 
  

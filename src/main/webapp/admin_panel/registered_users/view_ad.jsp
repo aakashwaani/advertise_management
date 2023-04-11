@@ -58,7 +58,7 @@
 					    <td><%=rs.getString("category") %> </td> 
 					    <td><%=rs.getString("description")%></td>
 					    <td><%=rs.getString("price") %> </td> 
-					    <td> <img src="<%=rs.getString("image_path")%>" height="100" width="100"> </td>
+					    <td> <img src="assets/<%=rs.getString("image_path")%>" height="100" width="100"> </td>
 					   
 					    <td><a href="update_ad.jsp?id=<%=rs.getString("id")%>">Update </a></td>
 					    <td><a href="delete_ad.jsp?id=<%=rs.getString("id")%>" class="btn btn-danger btn-sm">Delete </a></td>
