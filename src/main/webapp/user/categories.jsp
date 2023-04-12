@@ -14,8 +14,6 @@
 
 	<jsp:include page="navbar.jsp"></jsp:include>
 
-
-
 	<!-- product categories-->
 
 	<section class="bg-light">
@@ -133,7 +131,7 @@ for(let i = 0; i < 2;i++ ) {
 	for(let j=0;j<4;j++){
 		text += `<div class="col-md-6 col-lg-4 col-xl-3 mb-5 `+k+`">
     <div class="demo">
-    <a class="card lift" href="show_ad.jsp?category=`+category[k]+`">
+    <a class="card lift" href="furniture_ad.jsp?category=`+category[k]+`">
         <img class="card-img-top" src=`+images[k]+` alt="...">
         <div class="card-body text-center py-3">
             <h6 class="card-title mb-0">`+category[k]+`</h6>
