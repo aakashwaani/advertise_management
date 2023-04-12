@@ -91,12 +91,14 @@
 												class="form-control form-select" id="category"
 												name="adcategory" required>
 												<option value="">Select a category</option>
-												<option value="furniture">Furniture</option>
+												<option value="furniture">Furniture & Decors</option>
+												<option value="sports">Sports</option>
+												<option value="mobile">Mobiles and Tablets</option>
 												<option value="electronics">Electronics</option>
-												<option value="vehicles">Vehicles</option>
-												<option value="clothing">Clothing</option>
-												<option value="housing">Housing</option>
-												<option value="services">Services</option>
+												<option value="appliances">Home Applinaces</option>
+												<option value="kids">Kids & Toys</</option>
+												<option value="fashion">fashion</option>
+												<option value="books ">Books & Hobbies</option>
 											</select>
 											<div class="invalid-feedback">Please select a category
 												for your ad.</div>
