@@ -1,5 +1,8 @@
 <%@ page language="java" contentType="text/html; charset=ISO-8859-1"
 	pageEncoding="ISO-8859-1"%>
+
+<%@page import="java.sql.*"%>
+
 <!DOCTYPE html>
 <html>
 <head>
@@ -17,14 +20,28 @@
 	<!-- Page Content -->
 	<div class="container">
 
+		<%
+		String id = request.getParameter("id");
+		Class.forName("com.mysql.jdbc.Driver");
+		Connection con = DriverManager.getConnection("jdbc:mysql://localhost:3306/advertisement", "root", "root");
+		String sql = "select * from  ads  where id=?";
+		PreparedStatement ps = con.prepareStatement(sql);
+		ps.setString(1, id);
+		ResultSet rs = ps.executeQuery();
+
+		while (rs.next()) {
+		%>
+
+
 		<!-- Portfolio Item Heading -->
-		<h2 class="my-4">Page Heading Secondary Text</h2>
+		<h2 class="my-4"><%=rs.getString("title")%></h2>
 
 		<!-- Portfolio Item Row -->
 		<div class="row">
 
 			<div class="col-md-8">
-				<img class="img-fluid" src="https://via.placeholder.com/750x500"
+				<img class="img-fluid"
+					src="../admin_panel/registered_users/assets<%=rs.getString("image_path")%>"
 					alt="">
 			</div>
 
@@ -41,7 +58,7 @@
 						<div class="mb-4 pb-2">
 							<button type="button"
 								class="btn btn-outline-primary btn-floating">
-							<i class="fa-solid fa-phone"></i>
+								<i class="fa-solid fa-phone"></i>
 							</button>
 							<button type="button"
 								class="btn btn-outline-primary btn-floating">
@@ -77,6 +94,26 @@
 		<div class="container py-4 col-md-12">
 			<div class="card my-2">
 				<div class="card-body">
+
+					<%-- <div class="row" style="margin: 3%;">
+
+						<div class="col-md-6">
+							<img
+								src="../admin_panel/registered_users/assets<%=rs.getString("image_path")%>"
+								height="500" width="500">
+						</div>
+
+						<div class="col-md-6">
+							<h1 style="text-align: center;"><%=rs.getString("title")%></h1>
+							<div id="content">
+								Category : <a style="text-decoration: none; color: black;"><%=rs.getString("category")%></a><br>
+								Description : <a style="text-decoration: none; color: black;"><%=rs.getString("description")%></a><br>
+								Price : <a style="text-decoration: none; color: black;"><%=rs.getString("price")%></a><br>
+							</div>
+						</div>
+					</div> --%>
+
+
 					<nav>
 						<div class="nav nav-pills" id="nav-tab" role="tablist">
 							<button class="nav-link active" id="nav-home-tab"
@@ -86,7 +123,6 @@
 							<button class="nav-link" id="nav-profile-tab"
 								data-bs-toggle="tab" data-bs-target="#nav-profile" type="button"
 								role="tab" aria-controls="nav-profile" aria-selected="false">Feedback</button>
-
 						</div>
 					</nav>
 					<div class="tab-content" id="nav-tabContent">
@@ -96,42 +132,118 @@
 								<table class="table table-bordered my-3 ">
 									<tbody>
 										<tr>
-											<td>Product</td>
-											<td>Otto</td>
+											<td>Product Name</td>
+											<td><%=rs.getString("title")%></td>
 										</tr>
 										<tr>
-											<td>Condition</td>
-											<td>Thornton</td>
+											<td>Price</td>
+											<td><%=rs.getString("price")%></td>
 										</tr>
-										<tr>
+										<!-- <tr>
 											<td>Brand</td>
 											<td>Thornton</td>
-										</tr>
+										</tr> -->
 									</tbody>
 								</table>
 							</div>
 							<h6 class="fw-semibold">Description</h6>
+							<p><%=rs.getString("description")%></p>
+
 						</div>
+						<%
+						}
+						%>
 						<div class="tab-pane fade" id="nav-profile" role="tabpanel"
 							aria-labelledby="nav-profile-tab">
 
 							<form class="row g-3">
-								<div class="col-md-12">
-									<label for="user_name" class="form-label">Name</label> <input
-										type="text" class="form-control" id="user_name">
-								</div>
 
 								<div class="col-12">
-									<label for="inputMessage" class="form-label">Feedback</label>
-									<textarea class="form-control" id="inputMessage" rows="3"
-										placeholder="your message..."></textarea>
+									<div class="block">
+										<div class="block-header">
+											<div class="title">
+												<h2>Comments</h2>
+											</div>
+
+										</div>
+										<div class="writing">
+											<div contenteditable="true" class="textarea" autofocus
+												spellcheck="false">
+												<p></p>
+											</div>
+											<div class="footer">
+												<div class="text-format">
+													<button class="btn">
+														<i class="ri-bold"></i>
+													</button>
+													<button class="btn">
+														<i class="ri-italic"></i>
+													</button>
+													<button class="btn">
+														<i class="ri-underline"></i>
+													</button>
+													<button class="btn">
+														<i class="ri-list-unordered"></i>
+													</button>
+												</div>
+												<div class="group-button">
+													<button class="btn">
+														<i class="ri-at-line"></i>
+													</button>
+													<button type="button" class="btn btn-primary btn-rounded">
+														Send</button>
+												</div>
+											</div>
+										</div>
+
+										<div>
+											<div class="comment">
+												<div class="user-banner">
+													<div class="user">
+														<div class="avatar"
+															style="background-color: #fff5e9; border-color: #ffe0bd; color: #F98600">
+															AF <span class="stat green"></span>
+														</div>
+														<h5>Albert Flores</h5>
+													</div>
+													<button class="btn dropdown">
+														<i class="ri-more-line"></i>
+													</button>
+												</div>
+												<div class="content">
+													<p>Before installing this plugin please put back again
+														your wordpress and site url back to http.</p>
+												</div>
+											
+											</div>
+											<div class="reply comment">
+												<div class="user-banner">
+													<div class="user">
+														<div class="avatar"
+															style="background-color: #fff5e9; border-color: #ffe0bd; color: #F98600">
+															AD <span class="stat green"></span>
+														</div>
+														<h5>Bessie Cooper</h5>
+													</div>
+													<button class="btn dropdown">
+														<i class="ri-more-line"></i>
+													</button>
+												</div>
+												<div class="content">
+													<p>
+														Hi <a href="#" class="tagged-user">@Albert Flores</a>.Thanks
+														for your reply.
+													</p>
+												</div>
+
+											</div>
+										</div>
+
+									</div>
 
 								</div>
 
-								<div class="col-12 text-end">
-									<button type="submit" class="btn btn-primary">Send
-										Feedback</button>
-								</div>
+
 							</form>
 						</div>
 					</div>

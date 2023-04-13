@@ -17,6 +17,7 @@
 </head>
 <body>
 
+	<jsp:include page="navbar.jsp"></jsp:include>
 
 	<div id="page-wrapper">
 		<div class="main-page">
@@ -58,6 +59,7 @@
 			</div>
 		</div>
 	</div>
+
 
 
 </body>
