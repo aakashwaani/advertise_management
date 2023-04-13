@@ -155,96 +155,74 @@
 						%>
 						<div class="tab-pane fade" id="nav-profile" role="tabpanel"
 							aria-labelledby="nav-profile-tab">
+							<div class="block">
+								<div class="block-header">
+									<div class="title">
+										<h2>Comments</h2>
+									</div>
+									
+								</div>
+								<form>
+									<div class="mb-3">
+										<label for="inputEmail4" class="form-label">Your Name</label> <input
+											type="email" class="form-control" id="inputEmail4">
+									</div>
+									<div class="mb-3">
 
-							<form class="row g-3">
+										<label for="exampleFormControlTextarea1" class="form-label">Your Feedback </label>
+										<textarea class="form-control"
+											id="exampleFormControlTextarea1" rows="3" ></textarea>
+									</div>
+									<div class="text-end">
+										<button type="submit" class="btn btn-primary">send</button>
+									</div>
+								</form>
 
-								<div class="col-12">
-									<div class="block">
-										<div class="block-header">
-											<div class="title">
-												<h2>Comments</h2>
+								<div>
+									<div class="comment">
+										<div class="user-banner">
+											<div class="user">
+												<div class="avatar">
+													<img
+														src="https://www.shutterstock.com/image-vector/faceless-woman-face-icon-female-600w-2263344341.jpg"
+														alt=""> <span class="stat green"></span>
+												</div>
+												<h5>Albert Flores</h5>
 											</div>
-
+											<button class="btn dropdown">
+												<i class="ri-more-line"></i>
+											</button>
 										</div>
-										<div class="writing">
-											<div contenteditable="true" class="textarea" autofocus
-												spellcheck="false">
-												<p></p>
-											</div>
-											<div class="footer">
-												<div class="text-format">
-													<button class="btn">
-														<i class="ri-bold"></i>
-													</button>
-													<button class="btn">
-														<i class="ri-italic"></i>
-													</button>
-													<button class="btn">
-														<i class="ri-underline"></i>
-													</button>
-													<button class="btn">
-														<i class="ri-list-unordered"></i>
-													</button>
-												</div>
-												<div class="group-button">
-													<button class="btn">
-														<i class="ri-at-line"></i>
-													</button>
-													<button type="button" class="btn btn-primary btn-rounded">
-														Send</button>
-												</div>
-											</div>
-										</div>
-
-										<div>
-											<div class="comment">
-												<div class="user-banner">
-													<div class="user">
-														<div class="avatar"
-															style="background-color: #fff5e9; border-color: #ffe0bd; color: #F98600">
-															AF <span class="stat green"></span>
-														</div>
-														<h5>Albert Flores</h5>
-													</div>
-													<button class="btn dropdown">
-														<i class="ri-more-line"></i>
-													</button>
-												</div>
-												<div class="content">
-													<p>Before installing this plugin please put back again
-														your wordpress and site url back to http.</p>
-												</div>
-											
-											</div>
-											<div class="reply comment">
-												<div class="user-banner">
-													<div class="user">
-														<div class="avatar"
-															style="background-color: #fff5e9; border-color: #ffe0bd; color: #F98600">
-															AD <span class="stat green"></span>
-														</div>
-														<h5>Bessie Cooper</h5>
-													</div>
-													<button class="btn dropdown">
-														<i class="ri-more-line"></i>
-													</button>
-												</div>
-												<div class="content">
-													<p>
-														Hi <a href="#" class="tagged-user">@Albert Flores</a>.Thanks
-														for your reply.
-													</p>
-												</div>
-
-											</div>
+										<div class="content">
+											<p>Before installing this plugin please put back again
+												your wordpress and site url back to http.</p>
 										</div>
 
 									</div>
+									<div class="reply comment">
+										<div class="user-banner">
+											<div class="user">
+												<div class="avatar">
+													<img
+														src="https://www.shutterstock.com/image-vector/girl-avatar-profile-image-vector-600w-2192782413.jpg"
+														alt=""> <span class="stat green"></span>
+												</div>
+												<h5>Bessie Cooper</h5>
+											</div>
+											<button class="btn dropdown">
+												<i class="ri-more-line"></i>
+											</button>
+										</div>
+										<div class="content">
+											<p>
+												Hi <a href="#" class="tagged-user">@Albert Flores</a>.Thanks
+												for your reply.
+											</p>
+										</div>
 
+									</div>
 								</div>
-
-
-							</form>
+							</div>
 						</div>
 					</div>
 
